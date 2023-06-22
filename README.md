@@ -1,7 +1,7 @@
-<!-- # React Native App - Airport Simulation
+# React Native App - Airport Simulation
 
 ## How to clone?
 
 ## Tools and Technologies
 
-## Why I chose React-Native over Kotlin? -->
+## Why I chose React-Native over Kotlin?

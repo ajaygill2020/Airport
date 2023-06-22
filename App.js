@@ -9,8 +9,11 @@ import {
   Image,
   Button,
   View,
+  Alert,
 } from "react-native";
-// import Header from "./components/header";
+import Header from "./components/header";
+import TodoItem from "./components/todoItem";
+import AddTodo from "./components/appTodo";
 
 export default function App() {
   // Initial log statement
@@ -25,6 +28,25 @@ export default function App() {
     { text: "Get into line for security checkpoint", key: "3" },
     { text: "Go to assigned gate in terminal", key: "4" },
   ]);
+
+  const todoPressHandler = (key) => {
+    setCheckList((previousTodos) => {
+      return previousTodos.filter((checkList) => checkList.key != key);
+    });
+  };
+
+  const submitHandler = (text) => {
+    if (text.length > 3) {
+      setCheckList((previousTodos) => {
+        return [
+          { text: text, key: Math.random().toString() },
+          ...previousTodos,
+        ];
+      });
+    } else {
+      Alert.alert("Your new checklist task must be at least 4 characters long");
+    }
+  };
 
   const [flightsDepart] = useState([
     { name: "1010", key: "1" },
@@ -100,11 +122,15 @@ export default function App() {
         )}
       />
 
+      <Header />
       <View style={styles.content}>
+        <AddTodo submitHandler={submitHandler} />
         <View style={styles.list}>
           <FlatList
             data={checkList}
-            renderItem={({ item }) => <Text>{item.text}</Text>}
+            renderItem={({ item }) => (
+              <TodoItem item={item} pressHandler={pressHandler} />
+            )}
           />
         </View>
       </View>

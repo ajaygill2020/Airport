@@ -23,6 +23,7 @@ import React, { useState } from "react";
 import Home from "./screens/home";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
+import Navigator from "./routes/homeStack";
 
 export default function App() {
   let [fontsLoaded] = useState({
@@ -31,7 +32,7 @@ export default function App() {
   });
 
   if (fontsLoaded) {
-    return <Home />;
+    return <Navigator />;
   } else {
     return (
       <AppLoading startAsync={fontsLoaded} onFinish={(fontsLoaded = true)} />

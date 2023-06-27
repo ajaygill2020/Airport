@@ -1,6 +1,6 @@
 # React Native App - Airport Simulation
 
-![Alt text](image.png)
+## Diagram
 
 ## How to clone?
 

@@ -29,11 +29,10 @@ export default function ReviewDetails({ navigation }) {
 
 const style = StyleSheet.create({
   rating: {
-    flexDirection: "row",
     justifyContent: "center",
     paddingTop: 16,
     marginTop: 16,
-    borderTopWidth: 1,
-    borderTopColor: "red",
+    borderTopWidth: 10,
+    borderTopColor: "lightgreen",
   },
 });

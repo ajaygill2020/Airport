@@ -2,12 +2,13 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import Home from "../screens/home";
 import ReviewDetails from "../screens/reviewDetails";
+import Header from "../shared/header";
 
 const screens = {
   Home: {
     screen: Home,
     navigationOptions: {
-      title: "Welcome to DTW Airport",
+      headerTitle: () => <Header />,
       headerStyle: {
         backgroundColor: "#dcd",
       },

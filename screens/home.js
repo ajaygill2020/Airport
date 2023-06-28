@@ -24,6 +24,24 @@ export default function Home({ navigation }) {
       key: "2",
     },
     { title: "Good, but can be better", rating: 3, body: "N/A", key: "3" },
+    {
+      title: "Great and fast",
+      rating: 4,
+      body: " ",
+      key: "3",
+    },
+    {
+      title: "Too annoying!",
+      rating: 2,
+      body: "The flight had too many noisy passengers, but I still appreciate the flight attendents giving me headphones and peanuts.",
+      key: "4",
+    },
+    {
+      title: "Yes, would recommend",
+      rating: 5,
+      body: "Honestly, the flight crew was well-trained and well-prepared for flying through a storm.",
+      key: "5",
+    },
   ]);
 
   return (

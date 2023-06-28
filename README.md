@@ -5,11 +5,17 @@
 - Below is the base diagram which showcases the Home Screen (main screen) when the application is running, and the Flight Details screen that displays different objects based on the one flight you tap on from the Home Screen. You are able to move back and forth across the two screens to check out each individual flight:
   ![Alt text](image-3.png)
 
+* I also added another screen to allow the user to submit feedback, which will get logged out in console, so operator/code owner(s) can monitor feedback:
+  ![Alt text](image-4.png)
+
 ## Images
 
-Below is an example of how a basic review screen looks like. I added some updates to organize the flights better and you can compare side-by-side with an Android and iOS: ![Alt text](image-1.png)
+Below is an example of how a basic review screen looks like. I added some updates to organize the flights better and you can compare side-by-side with an Android and iOS:
+![Alt text](image-1.png)
 
 ![Alt text](image-2.png)
+
+![Alt text](image-5.png)
 
 ## Why I chose React-Native over its alternatives?
 

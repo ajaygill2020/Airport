@@ -6,11 +6,26 @@ import {
   FlatList,
   TouchableOpacity,
   ImageBackground,
+  Modal,
+  TouchableWithoutFeedback,
+  Keyboard,
 } from "react-native";
 import { globalStyles } from "../styles/global";
 import Card from "../shared/card";
+import { MaterialIcons } from "@expo/vector-icons";
+import ReviewForm from "./reviewForm";
 
 export default function Home({ navigation }) {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const addReview = (review) => {
+    review.key = Math.random().toString();
+    setReviews((currentReviews) => {
+      return [review, ...currentReviews];
+    });
+    setModalOpen(false);
+  };
+
   const todayDate = new Date().getDate();
   const todayMonth = new Date().getMonth();
   const todayYear = new Date().getFullYear();
@@ -240,6 +255,31 @@ export default function Home({ navigation }) {
       source={require("../assets/dtw.jpeg")}
       style={globalStyles.container}
     >
+      <Modal visible={modalOpen} animationType="slide">
+        <ImageBackground
+          source={require("../assets/dtw.jpeg")}
+          style={globalStyles.container}
+        >
+          <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+            <View style={styles.modalContent}>
+              <MaterialIcons
+                name="close"
+                size={24}
+                style={{ ...styles.modalToggle, ...styles.modalClose }}
+                onPress={() => setModalOpen(false)}
+              />
+              <ReviewForm />
+            </View>
+          </TouchableWithoutFeedback>
+        </ImageBackground>
+      </Modal>
+
+      <MaterialIcons
+        name="add"
+        size={24}
+        style={styles.modalToggle}
+        onPress={() => setModalOpen(true)}
+      />
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
@@ -255,3 +295,23 @@ export default function Home({ navigation }) {
     </ImageBackground>
   );
 }
+
+const styles = StyleSheet.create({
+  modalToggle: {
+    marginTop: 10,
+    marginBottom: 10,
+    borderWidth: 10,
+    borderColor: "white",
+    padding: 10,
+    borderRadius: 5,
+    alignSelf: "flex-start",
+  },
+  modalClose: {
+    marginTop: 30,
+    marginBottom: 20,
+    marginLeft: 10,
+  },
+  modalContent: {
+    flex: 1,
+  },
+});

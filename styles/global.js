@@ -4,7 +4,7 @@ export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 30,
-    backgroundColor: "lightblue",
+    backgroundColor: "#ffffe0",
   },
   titleText: {
     fontSize: 25,
@@ -14,6 +14,20 @@ export const globalStyles = StyleSheet.create({
   paragraph: {
     marginVertical: 8,
     lineHeight: 20,
+  },
+  input: {
+    borderWidth: 4,
+    borderColor: "midnightblue",
+    padding: 16,
+    fontSize: 12,
+    borderRadius: 3,
+  },
+  errorText: {
+    color: "crimson",
+    fontWeight: "bold",
+    marginBottom: 10,
+    marginTop: 6,
+    textAlign: "center",
   },
 });
 

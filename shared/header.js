@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
 export default function Header() {
@@ -9,8 +9,12 @@ export default function Header() {
 
   return (
     <View style={styles.header}>
-      <View>
-        <Text style={styles.headerText}>DTW Airport Flight Reviews</Text>
+      <View style={styles.headerTitle}>
+        <Image
+          source={require("../assets/dtw-sign.png")}
+          style={styles.headerImage}
+        />
+        <Text style={styles.headerText}>DTW Airport Flights</Text>
       </View>
     </View>
   );
@@ -33,5 +37,13 @@ const styles = StyleSheet.create({
   icon: {
     position: "absolute",
     left: 16,
+  },
+  headerImage: {
+    width: 26,
+    height: 26,
+    marginHorizontal: 10,
+  },
+  headerTitle: {
+    flexDirection: "row",
   },
 });

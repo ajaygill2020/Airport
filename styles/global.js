@@ -7,11 +7,9 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: "lightblue",
   },
   titleText: {
-    fontFamily: "nunito-bold",
     fontSize: 25,
-    justifyContent: "center",
-    alignContent: "center",
-    color: "#333",
+    color: "black",
+    alignSelf: "flex-end",
   },
   paragraph: {
     marginVertical: 8,
@@ -26,5 +24,7 @@ export const images = {
     3: require("../assets/rating-3.png"),
     4: require("../assets/rating-4.png"),
     5: require("../assets/rating-5.png"),
+    6: require("../assets/rating-6.png"),
+    7: require("../assets/rating-7.png"),
   },
 };

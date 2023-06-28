@@ -17,7 +17,7 @@ const screens = {
   ReviewDetails: {
     screen: ReviewDetails,
     navigationOptions: {
-      title: "Reviews from Passengers",
+      title: "Flight Details",
       headerStyle: {
         backgroundColor: "#bba",
       },

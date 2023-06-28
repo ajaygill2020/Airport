@@ -1,5 +1,14 @@
 # React Native App - Airport Simulation
 
+## File Structure
+
+- This project was made using an expo blank template. If you do not have expo installed on your local machine after cloning this repository, then you may run into errors.
+- The `assets` folder contains images and fonts that were used in this project.
+- The `components` folder houses the `header.js` file that defines a function for the Header component.
+- The `routes` folder has the `homeStack.js` file which details props for two out of the three screens.
+- The `screens` folder helps render the three main screens.
+- The `shared` folder has files which help render the Card/Header functions.
+
 ## Flow of App
 
 - Below is the base diagram which showcases the Home Screen (main screen) when the application is running, and the Flight Details screen that displays different objects based on the one flight you tap on from the Home Screen. You are able to move back and forth across the two screens to check out each individual flight:
@@ -26,4 +35,7 @@ Below is an example of how a basic review screen looks like. I added some update
 ## Future Work
 
 - One thing I can add is a component that will let me use a side drawer menu, beginning with a button. This will make it easier to go through other pages once they are added as opposed to just using a stack-navigator component.
-- Projects can always benefit from more tests (unit, integration, end-to-end)
+- Projects can always benefit from more tests (unit, integration, end-to-end).
+- Future developers can take this project forward by integrating a local mongoDb database which houses the JSON files relating to flight details. Specifically, they can add a schema file which will dictate the rules for JSON objects' data values, and fetch that data to render it in the `reviewDetails.js` folder.
+
+**NOTE: This project was tested using Expo Go across the Android and iOS environments (as of 28 June 2023)**

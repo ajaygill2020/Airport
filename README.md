@@ -20,7 +20,7 @@
 ## Images
 
 Below is an example of how a basic review screen looks like. I added some updates to organize the flights better and you can compare side-by-side with an Android and iOS:
-![Alt text](image-1.png)
+![Alt text](image-1.png)q
 
 ![Alt text](image-2.png)
 
@@ -37,5 +37,7 @@ Below is an example of how a basic review screen looks like. I added some update
 - One thing I can add is a component that will let me use a side drawer menu, beginning with a button. This will make it easier to go through other pages once they are added as opposed to just using a stack-navigator component.
 - Projects can always benefit from more tests (unit, integration, end-to-end).
 - Future developers can take this project forward by integrating a local mongoDb database which houses the JSON files relating to flight details. Specifically, they can add a schema file which will dictate the rules for JSON objects' data values, and fetch that data to render it in the `reviewDetails.js` folder.
+- Below is a screenshot from getting MongoDB Compass installed and populating the JSON objects:
+  ![Alt text](image-6.png)
 
-**NOTE: This project was tested using Expo Go across the Android and iOS environments (as of 28 June 2023)**
+**NOTE: This project was tested using Expo Go across the Android and iOS environments (as of 30 June 2023)**
